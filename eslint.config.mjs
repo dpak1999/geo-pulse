@@ -1,6 +1,44 @@
+import antfu from "@antfu/eslint-config";
+
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
-  // Your custom configs here
-)
+  antfu(
+    {
+      type: "app",
+      typescript: true,
+      formatters: true,
+      vue: true,
+      stylistic: {
+        indent: 2,
+        semi: true,
+        quotes: "double",
+      },
+    },
+    {
+      rules: {
+        "ts/no-redeclare": "off",
+        "no-console": "warn",
+        "ts/consistent-type-definitions": ["error", "type"],
+        "antfu/no-top-level-await": ["off"],
+        "node/prefer-global/process": ["off"],
+        "node/no-process-env": ["error"],
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            tsconfigRootDir: ".",
+          },
+        ],
+        "unicorn/filename-case": [
+          "error",
+          {
+            case: "kebabCase",
+            ignore: ["README.md"],
+          },
+        ],
+      },
+    },
+  ),
+);
+// Your custom configs here
