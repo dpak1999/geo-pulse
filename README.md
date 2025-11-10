@@ -1,6 +1,6 @@
 # Geopulse
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A nuxt application created for people to add images as memories to places on map
 
 ## Setup
 
