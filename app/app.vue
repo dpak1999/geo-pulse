@@ -3,6 +3,6 @@
     Hello world!
   </h1>
   <button class="btn btn-secondary">
-    Secondary
+    View map <Icon name="tabler:map-dollar" size="32" />
   </button>
 </template>
