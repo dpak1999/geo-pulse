@@ -1,0 +1,15 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist",
+    "build",
+    ".output"
+  ]
+}
