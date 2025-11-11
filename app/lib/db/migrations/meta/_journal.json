@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1762876694641,
+      "tag": "0000_new_meggan",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1762877273013,
+      "tag": "0001_familiar_hemingway",
+      "breakpoints": true
+    }
+  ]
+}

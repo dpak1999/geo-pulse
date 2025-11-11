@@ -4,19 +4,25 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "concurrently \"bun run db:dev\" \"bun run db:studio\" \"nuxt dev\"",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:migrate": "bun drizzle-kit generate && bun drizzle-kit migrate",
+    "db:studio": "bun drizzle-kit studio",
+    "db:dev": "turso dev --db-file local.db"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.15",
     "@nuxt/eslint": "1.10.0",
     "@nuxt/icon": "2.1.0",
     "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.17",
+    "concurrently": "^9.2.1",
+    "drizzle-orm": "^0.44.7",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",
     "tailwindcss": "^4.1.17",
@@ -29,9 +35,11 @@
     "@iconify-json/tabler": "^1.2.23",
     "@types/node": "^24.10.0",
     "daisyui": "^5.4.7",
+    "drizzle-kit": "^0.31.6",
     "eslint-plugin-format": "^1.0.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6"
+    "lint-staged": "^16.2.6",
+    "tsx": "^4.20.6"
   },
   "lint-staged": {
     "*": "bun lint"
