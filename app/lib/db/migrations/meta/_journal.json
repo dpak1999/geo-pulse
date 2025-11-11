@@ -15,6 +15,13 @@
       "when": 1762877273013,
       "tag": "0001_familiar_hemingway",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1762890541221,
+      "tag": "0002_early_eddie_brock",
+      "breakpoints": true
     }
   ]
 }
