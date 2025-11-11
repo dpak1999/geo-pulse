@@ -8,9 +8,7 @@
         <p class="py-6">
           A map based travel diary that lets you add photos as memories for the places you have travelled.
         </p>
-        <button class="btn btn-accent">
-          Continue with github <Icon name="tabler:brand-github" size="24" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>
