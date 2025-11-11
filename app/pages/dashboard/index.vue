@@ -8,7 +8,6 @@
         <p class="py-6">
           A map based travel diary that lets you add photos as memories for the places you have travelled.
         </p>
-        <AuthButton />
       </div>
     </div>
   </div>
