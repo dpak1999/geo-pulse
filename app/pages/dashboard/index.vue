@@ -1,5 +1,15 @@
 <script lang="ts" setup>
 const isSidebarOpen = ref(true);
+
+onMounted(() => {
+  isSidebarOpen.value
+    = localStorage.getItem("geo-pulse-isSidebarOpen") === "true";
+});
+
+function toggleSidebar() {
+  isSidebarOpen.value = !isSidebarOpen.value;
+  localStorage.setItem("geo-pulse-isSidebarOpen", isSidebarOpen.value.toString());
+}
 </script>
 
 <template>
@@ -14,7 +24,7 @@ const isSidebarOpen = ref(true);
           'justify-center': !isSidebarOpen,
           'justify-end': isSidebarOpen,
         }"
-        @click="isSidebarOpen = !isSidebarOpen"
+        @click="toggleSidebar"
       >
         <Icon v-if="isSidebarOpen" name="tabler:chevron-left" size="32" />
         <Icon v-else name="tabler:chevron-right" size="32" />
