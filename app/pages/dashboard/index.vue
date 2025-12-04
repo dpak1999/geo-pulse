@@ -1,11 +1,28 @@
 <template>
-  <div class="hero bg-base-200 container mx-auto mt-4">
-    <div class="hero-content text-center min-h-96">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">
-          GEOPULSE Dashboard
-        </h1>
+  <div class="flex-1 flex">
+    <div class="bg-base-200 w-64">
+      <div class="flex justify-end ">
+        <Icon name="tabler:chevron-left" size="42" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <SidebarButton label="Locations" icon="tabler:map" href="/dashboard" />
+        <SidebarButton
+          label="Add location"
+          icon="tabler:circle-plus-filled"
+          href="/dashboard/add"
+        />
+
+        <div class="divider" />
+
+        <SidebarButton
+          label="Sign out"
+          icon="tabler:logout-2"
+          href="/sign-out"
+        />
       </div>
     </div>
+
+    <div class="flex-1" />
   </div>
 </template>
