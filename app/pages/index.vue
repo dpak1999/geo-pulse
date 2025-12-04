@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const authStore = useAuthStore();
+</script>
+
 <template>
   <div class="hero bg-base-200 container mx-auto mt-4">
     <div class="hero-content text-center min-h-96">
@@ -8,7 +12,10 @@
         <p class="py-6">
           A map based travel diary that lets you add photos as memories for the places you have travelled.
         </p>
-        <AuthButton />
+        <AuthButton v-if="!authStore.user" />
+        <NuxtLink v-else to="/dashboard" class="btn btn-primary">
+          Start mapping your memories
+        </NuxtLink>
       </div>
     </div>
   </div>
